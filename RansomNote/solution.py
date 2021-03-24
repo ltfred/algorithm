@@ -1,15 +1,20 @@
+from collections import Counter
 
 
 class RansomNote(object):
 
     @staticmethod
     def solution(ransom: str, magazine: str) -> bool:
-        counter = {}
-        for i in magazine:
-            if i not in counter:
-                counter[i] = 1
-            else:
-                counter[i] += 1
+
+        # counter = {}
+        # for i in magazine:
+        #     if i not in counter:
+        #         counter[i] = 1
+        #     else:
+        #         counter[i] += 1
+
+        counter = Counter(magazine)
+
         for s in ransom:
             if s not in magazine or counter[s] == 0:
                 return False
