@@ -2,7 +2,7 @@
 class JewelsAndStones(object):
 
     @staticmethod
-    def solution(jewels, stones):
+    def solution(jewels: str, stones: str) -> int:
         # 转为集合
         jewels = set(jewels)
         count = 0
@@ -12,4 +12,5 @@ class JewelsAndStones(object):
         return count
 
 
-print(JewelsAndStones().solution("ab", "Aabcha"))
+print(JewelsAndStones().solution("ab", "Aabcha"))  # 3
+print(JewelsAndStones().solution("e", "Aabcha"))  # 0
